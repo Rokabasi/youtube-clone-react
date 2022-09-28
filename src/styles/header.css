@@ -35,6 +35,7 @@ header{
     font-weight: 600;
     color: white;
     background-color: #2F3238;
+    outline: none;
   }
   .my-icons{
     display: flex;

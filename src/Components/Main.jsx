@@ -21,11 +21,15 @@ export default function Main () {
     // console.log(video)
 
     return(
-        <div>
+        <div className="main">
             <Header/>
             <VideoCritere/>
             <main>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos alias ad illo voluptatibus odit beatae cupiditate dolorum quis repudiandae reiciendis. Fugit dignissimos odit fuga vitae ut voluptatibus consequuntur illo. Et!</p>
+                <div className="card">
+                    <img src="" alt="" className="card-image"/>
+                    <h3>Comment avoir un sourire professionnel</h3>
+                    <p></p>
+                </div>
             </main>
         </div>
     )
