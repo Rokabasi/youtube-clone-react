@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react"
-import SideBar from "./SideBar"
+import "../styles/main.css"
+import Header from "./Header"
+import VideoCritere from "./VideoCritere"
+
 
 export default function Main () {
     
@@ -19,7 +22,11 @@ export default function Main () {
 
     return(
         <div>
-            <SideBar/>
+            <Header/>
+            <VideoCritere/>
+            <main>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos alias ad illo voluptatibus odit beatae cupiditate dolorum quis repudiandae reiciendis. Fugit dignissimos odit fuga vitae ut voluptatibus consequuntur illo. Et!</p>
+            </main>
         </div>
     )
 }

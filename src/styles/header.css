@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    /* width: 80%; */
+    background-color: #3B3E46;
+    height: 100px;
+    display: flex;
+}
+.search-input{
+    padding-top: 2.5%;
+    width: 70%;
+    text-align: center;
+}
+.search-input .icon{
+    position: absolute;
+    color: white;
+}
+.icon {
+    padding: 10px;
+    min-width: 50px;
+    text-align: center;
+    color: rgb(182, 180, 177);
+  }
+  
+  .input-field {
+    padding: 10px;
+    padding-left: 60px;
+    border: none;
+    border-radius: 10px;
+    width: 40%;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #2F3238;
+  }
+  .my-icons{
+    display: flex;
+    width: 10%;
+    padding-top: 2.5%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 1.3rem;
+    color: white;
+  }

@@ -9,6 +9,7 @@ export default function SideBar(){
                 <div><i class="fa-solid fa-clapperboard fa-2x"></i></div>
                 <h1>R Stream</h1>
                 <div className='side-bar-icon'><i class="fa-solid fa-bars fa-2x"></i></div>
+
             </div>
             <div>
                 <ul>

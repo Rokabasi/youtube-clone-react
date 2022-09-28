@@ -1,10 +1,15 @@
+import SideBar from './Components/SideBar';
 
 import Main from './Components/Main';
+import "./styles/App.css"
 
 function App() {
   return (
     <div className="App">
-      <Main/>
+      <div className='navbar'>
+        <SideBar/>
+        <Main/>
+      </div>
     </div>
   );
 }
