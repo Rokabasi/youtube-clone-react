@@ -33,4 +33,16 @@ button:hover{
 button:active{
     background-color: #1d2025;
 }
+@media screen  and (max-width:450px) {
+    .video-critere{
+        height: auto;
+        padding: 2%;
+    }
+    button{
+        padding: 1% 4%;
+        font-size: 0.8rem;
+        margin: 0;
+        margin-left: 2%;
+    }
+}   
 

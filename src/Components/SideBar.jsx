@@ -13,10 +13,10 @@ export default function SideBar(){
             </div>
             <div>
                 <ul>
-                    <li><div><i class="fa-solid fa fa-house"></i></div>Home</li>
-                    <li><div><i class="fa-sharp fa fa-solid fa-chart-simple"></i></div>Tranding</li>
-                    <li><div><i class="fa-sharp fa fa-solid fa-film"></i></div>Dowloads</li>
-                    <li><div><i class="fa-solid fa fa-arrow-right-from-bracket"></i></div>Subscription</li>
+                    <li><div><i class="fa-solid fa fa-house"></i></div><h4>Home</h4></li>
+                    <li><div><i class="fa-sharp fa fa-solid fa-chart-simple"></i></div><h4>Tranding</h4></li>
+                    <li><div><i class="fa-sharp fa fa-solid fa-film"></i></div><h4>Dowloads</h4></li>
+                    <li><div><i class="fa-solid fa fa-arrow-right-from-bracket"></i></div><h4>Subscription</h4></li>
                 </ul>
             </div>
         </div>

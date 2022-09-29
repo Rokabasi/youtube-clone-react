@@ -4,6 +4,7 @@ export default function header (){
 
     return (
         <header>
+            <h1>R Stream</h1>
             <div className='search-input'>
                 <i className="fa solid fa-magnifying-glass icon"></i>
                 <input className='input-field' type="text" placeholder='Search'/>
