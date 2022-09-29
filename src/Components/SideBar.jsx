@@ -8,7 +8,7 @@ export default function SideBar(){
             <div className='side-bar-header'>
                 <div><i className="fa-solid fa-clapperboard fa-2x"></i></div>
                 <h1>R Stream</h1>
-                <div className='side-bar-icon'><i className="fa-solid fa-bars fa-2x"></i></div>
+                {/* <div className='side-bar-icon'><i className="fa-solid fa-bars fa-1x"></i></div> */}
 
             </div>
             <div>

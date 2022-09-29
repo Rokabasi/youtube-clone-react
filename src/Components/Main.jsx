@@ -28,8 +28,11 @@ export default function Main () {
     // console.log(video[0].snippet.title);
 
     return(
+        <>
         <div className="main">
-            {/* <main className="card-main">
+        <Header/>
+        <VideoCritere/>
+            <main className="card-main">
                 {
                     video.map((data, index) =>{
                         return (
@@ -50,8 +53,23 @@ export default function Main () {
                         )
                     } )
                 }
-            </main> */}
+                <div className="card">
+                        <img src={love} alt="" className="card-image"/>
+                        
+                        <h3>Love don't cost a thing</h3>
+                        <div className="chanel-info">
+                            <i className="fa-solid fa-circle-user fa-2x"></i>
+                            <div className="chanel-info-details">
+                                <h4>les ninja</h4>
+                                <div className="chanel-info-details-more">
+                                    <h5>9778 K vues</h5><span> - </span><h5> il y a 3 mois</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </main>
             
         </div>
+        </>
     )
 }
