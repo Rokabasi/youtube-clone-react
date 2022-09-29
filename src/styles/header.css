@@ -47,6 +47,10 @@ header h1{
     margin-right: auto;
     gap: 1.3rem;
     color: white;
+    color: #5663D1;
+  }
+  .fa-moon, .fa-regular{
+    color: white;
   }
 @media screen and (max-width:450px) {
   header{

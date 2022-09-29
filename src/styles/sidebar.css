@@ -6,15 +6,16 @@
 }
 .side-bar{
   width: 20%;
-  height: auto;
+  height: 600px;
   background-color: #3B3E46;
   color: white;
-  /* position: absolute; */
+  position: fixed;
 }
 .side-bar-header{
   display: flex;justify-content: center;
   padding-top: 10%;
   padding-left: 3%;
+  color: #5663D1;
  
 }
 .side-bar-header h1{
@@ -31,7 +32,7 @@
   list-style: none;
   display: flex;
   padding: 7% 20%;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   padding-top: 7%;
   padding-bottom: 7%;
   cursor: pointer;
