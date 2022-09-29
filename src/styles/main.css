@@ -6,6 +6,11 @@
 }
 .main{
     width: 80%;
+    /* left: 20%; */
+    /* margin-left: 20%; */
+/* border: 5px solid green; */
+margin-left:20%;
+  height: 100vh;
 }
 .card-main{
     display: flex;
@@ -52,5 +57,9 @@
 @media screen and (max-width:450px) {
     .main{
         width: 100%;
+        margin-left: 0;
+        margin-bottom: 0;
+        overflow-y: scroll;
+        min-height:100px;
     }
 }

@@ -7,6 +7,10 @@ header{
     background-color: #3B3E46;
     height: 100px;
     display: flex;
+   position: fixed;
+   width: 80%;
+   margin-top: 0;
+   box-sizing: border-box;
 }
 header h1{
   display: none;
@@ -31,7 +35,7 @@ header h1{
     padding: 10px;
     padding-left: 60px;
     border: none;
-    border-radius: 10px;
+    border-radius: 10px 0 0 10px;
     width: 40%;
     font-size: 1rem;
     font-weight: 600;
@@ -39,6 +43,16 @@ header h1{
     background-color: #2F3238;
     outline: none;
   }
+  
+  .button-search{
+    border-radius : 0px 10px 10px 0;
+    background-color: #5663D1;
+    margin-left: 0;
+    padding: 11px;
+    margin-top: 0;
+    border: none;
+  }
+
   .my-icons{
     display: flex;
     width: 10%;
@@ -68,7 +82,7 @@ header h1{
   }
   .search-input{
     padding-top: 7%;
-    width: 45%;   
+    width: 45%;  
 }
 .icon {
   padding: 5px;
@@ -77,8 +91,8 @@ header h1{
 }
  .input-field {
     padding: 8px;
-    padding-left: 40px;
-    width: 100%;
+    padding-left: 10px;
+    width: 60%;
     font-size: 0.9rem;
     font-weight: 500;
   }
