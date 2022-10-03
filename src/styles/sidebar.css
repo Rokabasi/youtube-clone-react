@@ -15,6 +15,11 @@
   left: 0;
   border-right: 1px solid #363941;
 }
+a{
+  text-decoration: none;
+  display: flex;
+  color: white;
+}
 .side-bar-header{
   display: flex;justify-content: center;
   padding-top: 10%;
@@ -37,8 +42,8 @@
   display: flex;
   padding: 5% 15%;
   font-size: 1rem;
-  padding-top: 7%;
-  padding-bottom: 7%;
+  padding-top: 11%;
+  padding-bottom: 11%;
   cursor: pointer;
 }
 .side-bar ul li:hover{

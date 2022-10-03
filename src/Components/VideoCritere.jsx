@@ -11,6 +11,7 @@ export default function videoCritere (){
             <button className="other-critere" type="button">SQl</button>
             <button className="other-critere" type="button">React</button>
             <button className="other-critere" type="button">Music</button>
+            
         </div>
     )
 }

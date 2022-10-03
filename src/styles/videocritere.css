@@ -7,6 +7,10 @@
     background-color: #42464F;
     height: 3.4rem;
     margin-top: 80px;
+    overflow-x: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
 }
 .other-critere{
     padding: 8px 20px;

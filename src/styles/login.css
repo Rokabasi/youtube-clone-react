@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+}
+form{
+    width: 50%;
+    margin: 10vh auto 66.2vh auto;
+    background-color: #3B3E46;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    color: white;
+    border-radius: 10px;
+}
+form h2{
+    font-size: 3rem;
+    font-weight: 500;
+}
+form h5{
+    font-size: 1.5rem;
+    padding-top: 3%;
+    font-weight: 400;  
+    padding-bottom: 3%; 
+}

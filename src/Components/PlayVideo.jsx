@@ -1,4 +1,4 @@
-
+import "../styles/playvideo.css"
 
 export default function PlayVideo(){
 
@@ -6,6 +6,7 @@ export default function PlayVideo(){
         <div className="play-video">
             <div>
                 <img src="" alt=""/>
+
             </div>
             <div>
 
