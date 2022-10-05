@@ -1,43 +1,51 @@
+import React from "react";
+import { GoogleLogin } from "react-google-login";
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AccountInfosContext } from "../context/AccountContext";
 import "../styles/login.css"
-import "../styles/subscription.css"
-import {GoogleLogin} from 'react-google-login'
-import { gapi } from "gapi-script"
-import { useEffect } from "react"
-import { Link } from "react-router-dom"
 
-const clientId = '757010538260-arnh8a0826kpi72fdqcb08fsp7agceiq.apps.googleusercontent.com'
-export default function Login (){
-    useEffect(() => {
-        function start() {
-            gapi.client.init({
-                clientId: '757010538260-arnh8a0826kpi72fdqcb08fsp7agceiq.apps.googleusercontent.com',
-                scope: ""
-        });
-        }
-    gapi.load('client:auth2', start);
-  });
-      
-    const onSuccess = (res) =>{
-        console.log(res);
-        console.log('sty');
+const Login = () => {
+    const {setImgUrl,setLoginState,loginState,accessToken,setAccessToken} = useContext(AccountInfosContext)
+    const clientId = '757010538260-arnh8a0826kpi72fdqcb08fsp7agceiq.apps.googleusercontent.com'   
+    const onSuccess = (res)=>{
+        console.log(res)
+        setImgUrl(res.profileObj.imageUrl)
+        setLoginState(true)
+        setAccessToken(res.accessToken)
     }
-    const onFaillure = (res) =>{
+    const onFaillure = (res)=>{
         console.log(res);
     }
+    
     return(
-        <div>
-              <div className="subscription">
-
-                <Link to='/main'><GoogleLogin
-            clientId={clientId}
-            buttonText = "login with Google"
-            onSuccess = {onSuccess}
-            onFailure = {onFaillure}
-            // isSignedIn = {true}
-           /></Link>
-           
-        </div>
-        
-        </div>
+        <>
+            <div className="login-content">
+                <h2>Connexion</h2>
+                <h3>Accéder à R Stream grâce à ton Compte Google </h3>
+                <div>
+                    <div className="login-button">
+                    <GoogleLogin
+                        clientId = {clientId}
+                        buttonText = 'Select Google account'
+                        onSuccess={onSuccess}
+                        onFailure={onFaillure}
+                        scope="https://www.googleapis.com/auth/youtube.force-ssl"
+                    />
+                    </div>
+                </div>
+                {
+                    (loginState)? <div>
+                    <Link to='/main'>
+                        <button className="validate-button">connect to R-Stream</button>
+                        </Link>
+                </div>: null
+                }
+                
+            </div> 
+            
+        </>
     )
 }
+
+export default Login

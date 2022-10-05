@@ -4,24 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter,Route,Routes } from 'react-router-dom';
-import  Header from './Components/Header';
-import SideBar from './Components/SideBar';
-import Main from './Components/Main';
-import Subscription from './Components/Subscription';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const clientId = '757010538260-arnh8a0826kpi72fdqcb08fsp7agceiq.apps.googleusercontent.com'
+
 root.render(
   <BrowserRouter>
-
-    {/* <App />
-    <SideBar/> */}
-      {/* <Header/> */}
-      <Routes>
-        <Route path='/' element={<App/>}/>
-        <Route path='/subscription' element={<Subscription/>}/>
-        <Route path='/main' element={<Main/>}/>
-      </Routes>
-    
+  <GoogleOAuthProvider clientId='757010538260-arnh8a0826kpi72fdqcb08fsp7agceiq.apps.googleusercontent.com'>
+    <App/>
+  </GoogleOAuthProvider>
   </BrowserRouter>
  
 );

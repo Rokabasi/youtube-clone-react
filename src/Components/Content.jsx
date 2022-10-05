@@ -2,34 +2,53 @@ import { useEffect, useState } from "react"
 import "../styles/main.css"
 import Header from "./Header"
 import VideoCritere from "./VideoCritere"
+import { AccountInfosContext } from '../context/AccountContext'
+import { useContext } from 'react'
 
 
 export default function Content () {
 
     let newKey = 'AIzaSyBDohBOVS3nWevO-W-YcAKYJOrsmqJZ19k'
     
+    const {accessToken}  = useContext(AccountInfosContext)
     const [video, setVideo] = useState([])
     const [title, setTitle] = useState("")
+    const [playLists, setPlayLists] = useState([])
     
-    let myUrl = 'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=8&regionCode=FR&key=AIzaSyCooIkgsCtLXA6x49lZwQ5u1xBhCZlfJr0' 
+    let myUrl = 'https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=8&regionCode=FR&key=AIzaSyAHHejPb4CHZYQCDhyb4dWDG4q7n1ZT-_E' 
     let mykey = 'AIzaSyCooIkgsCtLXA6x49lZwQ5u1xBhCZlfJr0'
     
+    // useEffect(()=>{
+    //     fetch('https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=8&regionCode=FR&key=AIzaSyCooIkgsCtLXA6x49lZwQ5u1xBhCZlfJr0')
+    //     // {method : 'GET', headers : new Headers({'Authorization': `Bearer ${accessToken}`})})        
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         setVideo(data.items)
+    //         setTitle(data.items[0].id)})
+    // },[]);
+
     useEffect(()=>{
-        fetch('https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=8&regionCode=FR&key=AIzaSyCooIkgsCtLXA6x49lZwQ5u1xBhCZlfJr0' )
+        fetch('https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=32&key=AIzaSyAWhMB1MsRJRjw4FkGU2OfZfSlW9YzcTHU',
+        { method : 'GET',headers:new Headers({'Authorization': `Bearer ${accessToken}`})})     
         .then(res => res.json())
         .then(data => {
             setVideo(data.items)
             setTitle(data.items[0].id)})
-    },[]);
-    console.log("romain",title);
-
-    console.log(video)
-    // console.log(video[0].snippet.title);
+    },[accessToken]);
+        console.log(playLists);
+    // useEffect (()=>{
+    //     fetch('https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&myRating=like&key=AIzaSyCel8ONyPL6meiuFqfygNbYo_iq-GCY7Yo')
+    //     // {method:'GET',headers:new Headers({'Authorization': `Bearer ${accessToken}`})})
+    //     .then(res => res.json())
+    //     .then(data => setPlayList(data))
+        
+    // }, []);
+    console.log(accessToken);
+    console.log(video);
 
     return(
         <>
         <div className="main">
-        {/* <Header/> */}
         <VideoCritere/>
             <main className="card-main">
                 {
