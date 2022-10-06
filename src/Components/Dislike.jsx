@@ -4,6 +4,7 @@ import SideBar from "./SideBar"
 import Header from "./Header"
 import { AccountInfosContext } from '../context/AccountContext'
 import { useContext } from 'react'
+import { Link } from "react-router-dom"
 
 
 export default function Content () {
@@ -32,7 +33,8 @@ export default function Content () {
                 {
                     videoLinked.map((data, index) =>{
                         return (
-                    <div key={index} className="card">
+                            <Link to={`/playvideo/${data.id}`} className='like'>
+                    <div key={index} className="">
                         <img src={data.snippet.thumbnails.medium.url} alt="" className="card-image"/>
                         
                         <h3>{data.snippet.title}</h3>
@@ -46,6 +48,7 @@ export default function Content () {
                             </div>
                         </div>
                     </div>
+                            </Link>
                         )
                     } )
                 }
