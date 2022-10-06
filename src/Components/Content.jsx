@@ -41,8 +41,8 @@ export default function Content () {
                     video.map((data, index) =>{
                         return (
                             
-                            
-                    <div key={index} className="card">   
+                    <Link to={`/playvideo/${data.id}`} className='like'>
+                    <div key={index} className="">   
                         <img src={data.snippet.thumbnails.medium.url} alt="" className="card-image"/>
                         <h3>{data.snippet.title}</h3>
                         <div className="chanel-info">
@@ -54,8 +54,9 @@ export default function Content () {
                                 </div>
                             </div>
                         </div>
-                           
                     </div>
+                    </Link>
+                           
                           
                             
                         )

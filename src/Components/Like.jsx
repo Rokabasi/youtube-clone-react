@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import "../styles/main.css"
+import "../styles/like.css"
 import SideBar from "./SideBar"
-import Header from "./Header"
+// import Header from "./Header"
 import { AccountInfosContext } from '../context/AccountContext'
 import { useContext } from 'react'
 import { Link } from "react-router-dom"
@@ -21,7 +21,7 @@ export default function Content () {
     },[accessToken]);
        
     console.log(videoLinked);
-    const exemple = 'mama'
+    const exemple='tfty'
 
     return(
         <>
@@ -32,10 +32,10 @@ export default function Content () {
                 {
                     videoLinked.map((data, index) =>{
                         return (
-                    <div key={index} className="card">
-                        <Link to={`/playvideo/${exemple}`}>
+                        <Link to={`/playvideo/${data.id}`} className='like'>
+                    <div key={index}>
                             <img src={data.snippet.thumbnails.medium.url} alt="" className="card-image"/>
-                            
+                        
                             <h3>{data.snippet.title}</h3>
                             <div className="chanel-info">
                                 <i className="fa-solid fa-circle-user fa-2x"></i>
@@ -46,8 +46,8 @@ export default function Content () {
                                     </div>
                                 </div>
                             </div>
-                        </Link>
                     </div>
+                        </Link>
                         )
                     } )
                 }

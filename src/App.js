@@ -32,7 +32,7 @@ function App() {
         <Route path='/main' element={<Main/>}/>
         <Route path='/like' element={<Like/>}/>
         <Route path='/dislike' element={<Dislike/>}/>
-        <Route path='/playvideo/:data' element={<PlayVideo/>}/>
+        <Route path='/playvideo/:id' element={<PlayVideo/>}/>
         <Route path='/subscription' element={<Subscription/>}/>
       </Routes>
     </AccountInfosContext.Provider>
