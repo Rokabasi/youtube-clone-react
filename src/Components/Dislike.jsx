@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import "../styles/subscription.css"
+import "../styles/main.css"
 import SideBar from "./SideBar"
 import Header from "./Header"
 import { AccountInfosContext } from '../context/AccountContext'
@@ -13,7 +13,7 @@ export default function Content () {
     const {accessToken}  = useContext(AccountInfosContext)
     const [videoLinked, setVideoLinked] = useState([])
     useEffect(()=>{
-        fetch('https://youtube.googleapis.com/youtube/v3/subscriptions?part=snippet%2CcontentDetails&mine=true&key=AIzaSyAWhMB1MsRJRjw4FkGU2OfZfSlW9YzcTHU',
+        fetch('https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&myRating=dislike&key=AIzaSyAWhMB1MsRJRjw4FkGU2OfZfSlW9YzcTHU',
         { method : 'GET',headers:new Headers({'Authorization': `Bearer ${accessToken}`})})     
         .then(res => res.json())
         .then(data => {
@@ -27,22 +27,21 @@ export default function Content () {
         <>
         <div className="main">
             <SideBar/>
-            {/* <Header/> */}
+            <Header/>
             <main className="card-main">
                 {
                     videoLinked.map((data, index) =>{
                         return (
                     <div key={index} className="card">
-                        <img src={data.snippet.thumbnails.default.url} alt="" className="card-image"/>
-                        <h4>{data.snippet.title}</h4>
+                        <img src={data.snippet.thumbnails.medium.url} alt="" className="card-image"/>
                         
+                        <h3>{data.snippet.title}</h3>
                         <div className="chanel-info">
-                            {/* <i className="fa-solid fa-circle-user fa-2x"></i> */}
+                            <i className="fa-solid fa-circle-user fa-2x"></i>
                             <div className="chanel-info-details">
-                                
-                                <h3>{data.snippet.description}</h3>
+                                <h4>{data.snippet.channelTitle}</h4>
                                 <div className="chanel-info-details-more">
-                                    {/* <h5>{data.statistics.viewCount}</h5><span> - </span><h5>{data.snippet.publishedAt}</h5> */}
+                                    <h5>{data.statistics.viewCount}</h5><span> - </span><h5>{data.snippet.publishedAt}</h5>
                                 </div>
                             </div>
                         </div>

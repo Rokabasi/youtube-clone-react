@@ -9,6 +9,10 @@
     margin-left:15%;
     height: 100vh;
 }
+Link{
+    text-decoration: none;
+    width: 23.7%;
+}
 .card-main{
     display: flex;
     flex-wrap: wrap;

@@ -5,7 +5,10 @@ import { AccountInfosContext} from './context/AccountContext';
 import Main from './Components/Main';
 import { useEffect, useState } from 'react';
 import { gapi } from 'gapi-script';
-import Linked from './Components/Linked'
+import Like from './Components/Like'
+import PlayVideo from './Components/PlayVideo';
+import Dislike from './Components/Dislike'
+import Subscription from './Components/Subscription'
 
 const clientId = '757010538260-arnh8a0826kpi72fdqcb08fsp7agceiq.apps.googleusercontent.com' 
 function App() {
@@ -27,7 +30,10 @@ function App() {
         <Routes>
         <Route path='/'element={<Login/>} />
         <Route path='/main' element={<Main/>}/>
-        <Route path='/linked' element={<Linked/>}/>
+        <Route path='/like' element={<Like/>}/>
+        <Route path='/dislike' element={<Dislike/>}/>
+        <Route path='/playvideo/:data' element={<PlayVideo/>}/>
+        <Route path='/subscription' element={<Subscription/>}/>
       </Routes>
     </AccountInfosContext.Provider>
     </div>
