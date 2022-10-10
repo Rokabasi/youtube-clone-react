@@ -45,6 +45,7 @@ a{
   padding-top: 11%;
   padding-bottom: 11%;
   cursor: pointer;
+  width: 100%;
 }
 .side-bar ul li:hover{
   border: none;
@@ -56,6 +57,13 @@ a{
 .fa{
   text-align: center;
   width: 40px;
+}
+.btn-logout{
+  border: none;
+  background-color: #3B3E46;
+  color: white;
+  font-size: 1.1rem;
+  width: 100%;
 }
 @media screen and (max-width:450px) {
   .side-bar{

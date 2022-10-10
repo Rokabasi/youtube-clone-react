@@ -12,7 +12,9 @@ const Logout = () => {
         <>
             <GoogleLogout
                 clientId={clientId}
-                button = {'log out'}
+                render = { renderProps => (
+                    <button onClick={renderProps.onClick} disabled={renderProps.disabled}>Select your Google compte for login</button>
+                )}
                 onLogoutSuccess = {onSuccess}  
             />
         </>

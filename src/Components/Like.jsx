@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import "../styles/like.css"
 import SideBar from "./SideBar"
-// import Header from "./Header"
+import Header from "./Header"
 import { AccountInfosContext } from '../context/AccountContext'
 import { useContext } from 'react'
 import { Link } from "react-router-dom"
@@ -27,7 +27,7 @@ export default function Content () {
         <>
         <div className="main">
             <SideBar/>
-            {/* <Header/> */}
+            <Header/>
             <main className="card-main">
                 {
                     videoLinked.map((data, index) =>{

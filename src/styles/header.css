@@ -11,7 +11,7 @@ header{
    width: 85%;
    margin-top: 0;
    box-sizing: border-box;
-   margin-left: 15%;
+   
 }
 header h1{
   display: none;
@@ -56,24 +56,27 @@ header h1{
 
   .my-icons{
     display: flex;
-    width: 10%;
+    width: 12%;
     padding-top: 1%;
     margin-left: auto;
     margin-right: auto;
-    gap: 1.3rem;
+    gap: 2.6rem;
     color: white;
     color: #5663D1;
-    
   }
   .fa-moon, .fa-regular{
     color: white;
+  }
+  .btn-logout{
+   margin-right: 5px;
+    width: 8%;
+    margin-top: 0px;
   }
   .count-img{
     border-radius: 50px;
     width: 40px;
     margin-top: 9%;
     margin-right: 60px;
-
   }
 @media screen and (max-width:450px) {
   header{

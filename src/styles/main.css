@@ -4,16 +4,13 @@
     box-sizing: border-box;
     
 }
-.main{
+.main-app{
     width: 85%;
     margin-left:15%;
     height: 100vh;
 }
-Link{
-    text-decoration: none;
-    width: 23.7%;
-}
-.card-main{
+
+.main-card{
     display: flex;
     flex-wrap: wrap;
     padding: 2% 1%;
@@ -21,45 +18,55 @@ Link{
     gap: 1rem;
 }
 .link{
-
+    text-decoration: none;
     width: 23.7%;
-    border: 1px solid red;
+    margin-bottom: 25px;
 }
-.card{
+.link:hover{
+    transform: scale(1.1);
+    border: 1px solid#3B3E46;
 }
 .card-image{
     width: 100%;
     height: 50%;
 }
-.card h3{
-    color: white;
-    font-weight: 400;
-    font-size: 1rem;
-    border: 1px solid red;
-    height: 70px;
+h3{
+    font-weight: 500;
+    font-size: 0.9rem;
+    height: 60px;
+    padding-top: 5px;
 }
-.card .chanel-info{
+.chanel-info{
     display: flex;
-    border: 1px solid red;
 }
-.card .chanel-info-details{
+.chanel-info-details{
    display: block;
-    padding-left: 5%;
-    color: white;
+   width: 60%;
+   margin-left: 5%;
+   
     
 }
-.chanel-info-details h4{
-    font-size: 1rem;
-    font-weight: 300;
+
+.chanel-logo{
+    width: 100%;
+    height: 40px;
+    border-radius: 150px;
+    margin-left: 10%;
+    margin-top: 1px;
+ }
+.chanel-info-details > h4{
+    font-size: 1.2rem;
+    font-weight: 500;
 }
-.card .chanel-info-details-more{
-    display: flex;
+ .chanel-info-details-more{
     padding-top: 3%;
     gap: 0.4rem;
+    width: 100%;
 }
-.chanel-info-details h5{
-    font-size: 0.8rem;
+.chanel-info-details-more h5{
+    font-size: 1rem;
     font-weight: 300;
+   padding-top: 2%;
 }
 @media screen and (max-width:450px) {
     .main{

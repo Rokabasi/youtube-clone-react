@@ -25,20 +25,15 @@ export default function SideBar(){
             </div>
             <div>
                 <ul>
-                    <li><Link to="/main"><div><i className="fa-solid fa fa-house"></i></div><h4>Home</h4></Link></li>
-                    <li><Link><div><i className="fa-sharp fa fa-solid fa-chart-simple"></i></div><h4>Tranding</h4></Link></li>
-                    <li><Link><div><i className="fa-sharp fa fa-solid fa-film"></i></div><h4>Dowloads</h4></Link></li>
-                    <li><Link to='/subscription'><div><i className="fa-solid fa fa-arrow-right-from-bracket"></i></div><h4>Subscription</h4></Link></li>
-                    <li><Link to='/like'><div><i className="fa-solid fa fa-thumbs-up"></i></div><h4>Like</h4></Link></li>
-                    <li><Link to='/dislike'><div><i className="fa-solid fa fa-thumbs-down"></i></div><h4>Dislike</h4></Link></li>
-                    <li><Link to='/'><GoogleLogout  clientId={clientId}
-                                        button = {'Se deconnecter'}
-                                        onLogoutSuccess = {onSuccess}  
-                                    />
-                        </Link>
-                    </li>
+                <Link to="/main"><li><div><i className="fa-solid fa fa-house"></i></div><h4>Home</h4></li></Link>
+                <Link><li><div><i className="fa-sharp fa fa-solid fa-chart-simple"></i></div><h4>Tranding</h4></li></Link>
+                    <Link to='/subscription'><li><div><i className="fa-solid fa fa-arrow-right-from-bracket"></i></div><h4>Subscription</h4></li></Link>
+                    <Link to='/like'><li><div><i className="fa-solid fa fa-thumbs-up"></i></div><h4>Like</h4></li></Link>
+                    <Link to='/dislike'><li><div><i className="fa-solid fa fa-thumbs-down"></i></div><h4>Dislike</h4></li></Link>
+                   
                 </ul>
             </div>
+            
         </div>
     )
 }

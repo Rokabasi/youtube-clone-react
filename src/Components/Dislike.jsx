@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import "../styles/main.css"
+import "../styles/dislike.css"
 import SideBar from "./SideBar"
 import Header from "./Header"
 import { AccountInfosContext } from '../context/AccountContext'
@@ -10,28 +11,44 @@ import { Link } from "react-router-dom"
 export default function Content () {
 
     let newKey = 'AIzaSyBDohBOVS3nWevO-W-YcAKYJOrsmqJZ19k'
-    
+    const ApiKey = 'AIzaSyAWhMB1MsRJRjw4FkGU2OfZfSlW9YzcTHU'
     const {accessToken}  = useContext(AccountInfosContext)
-    const [videoLinked, setVideoLinked] = useState([])
+    // const [makeVideoCard, setmakeVideoCard] = useState('') 
+    // const  channel_http = "https://www.googleapis.com/youtube/v3/channels?";
+    const [videoLiked, setVideoLiked] = useState([])
     useEffect(()=>{
         fetch('https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&myRating=dislike&key=AIzaSyAWhMB1MsRJRjw4FkGU2OfZfSlW9YzcTHU',
         { method : 'GET',headers:new Headers({'Authorization': `Bearer ${accessToken}`})})     
         .then(res => res.json())
         .then(data => {
-            setVideoLinked(data.items)
+            setVideoLiked(data.items)
             })
     },[accessToken]);
-       
-    console.log(videoLinked);
-
+    // const getChannelIcon = (videoLinked) => {
+    //     fetch(channel_http + new URLSearchParams({
+    //         key: ApiKey,
+    //         part: 'snippet',
+    //         id: videoLinked.snippet.channelId
+    //     }))
+    //     .then(res => res.json())
+    //     .then(data => {
+    //         // video_data.channelThumbnail = data.items[0].snippet.thumbnails.default.url;
+    //         // setmakeVideoCard(video_data);
+    //         setmakeVideoCard(data);
+    //     })
+    // }
+    // console.log(makeVideoCard); 
+    console.log(videoLiked);
+    
     return(
         <>
+        
         <div className="main">
             <SideBar/>
             <Header/>
             <main className="card-main">
                 {
-                    videoLinked.map((data, index) =>{
+                    videoLiked.map((data, index) =>{
                         return (
                             <Link to={`/playvideo/${data.id}`} className='like'>
                     <div key={index} className="">

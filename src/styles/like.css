@@ -22,7 +22,10 @@ Link{
 }
 .like{
     width: 23.7%;
-    border: 1px solid white;
+}
+.like:hover{
+    transform: scale(1.1);
+    border: 1px solid#3B3E46;
 }
 /* .card{
     width: 23.7%;
@@ -50,7 +53,7 @@ Link{
     
 }
 .chanel-info-details h4{
-    font-size: 1rem;
+    /* font-size: 1rem; */
     font-weight: 300;
 }
 .card .chanel-info-details-more{

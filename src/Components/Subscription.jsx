@@ -27,7 +27,7 @@ export default function Content () {
         <>
         <div className="main">
             <SideBar/>
-            {/* <Header/> */}
+            <Header/>
             <main className="card-main">
                 {
                     videoLinked.map((data, index) =>{
